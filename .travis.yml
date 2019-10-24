@@ -3,4 +3,4 @@ language: swift
 os: osx
 xcode_project: NeoNews/NeoNews.xcodeproj
 xcode_scheme: NeoNews
-xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone X
+xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone 11
