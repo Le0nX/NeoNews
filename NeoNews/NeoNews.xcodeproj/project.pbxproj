@@ -16,6 +16,8 @@
 		1460ED0B2362129300D00B06 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED0A2362129300D00B06 /* ThemeManager.swift */; };
 		1460ED3F2365C12B00D00B06 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED3E2365C12B00D00B06 /* UIColor+RGB.swift */; };
 		1460ED412365C61500D00B06 /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED402365C61500D00B06 /* HeadlinesViewController.swift */; };
+		1460ED442365CF1800D00B06 /* HeadlinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED432365CF1800D00B06 /* HeadlinesCell.swift */; };
+		1460ED472365FCDF00D00B06 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED462365FCDF00D00B06 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		1460ED0A2362129300D00B06 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		1460ED3E2365C12B00D00B06 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
 		1460ED402365C61500D00B06 /* HeadlinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
+		1460ED432365CF1800D00B06 /* HeadlinesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesCell.swift; sourceTree = "<group>"; };
+		1460ED462365FCDF00D00B06 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,11 @@
 		1460ECE52361DB9500D00B06 /* NeoNews */ = {
 			isa = PBXGroup;
 			children = (
+				1460ED452365FCBF00D00B06 /* Services */,
+				1460ED422365CE8B00D00B06 /* Cells */,
 				1460ED092362125B00D00B06 /* Managers */,
 				1460ED082361FAC000D00B06 /* Controllers */,
-				1460ED3D2365C10800D00B06 /* Utils */,
+				1460ED3D2365C10800D00B06 /* Extensions */,
 				1460ECE62361DB9500D00B06 /* AppDelegate.swift */,
 				1460ECE82361DB9500D00B06 /* SceneDelegate.swift */,
 				1460ECEC2361DB9500D00B06 /* Main.storyboard */,
@@ -121,12 +127,28 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		1460ED3D2365C10800D00B06 /* Utils */ = {
+		1460ED3D2365C10800D00B06 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				1460ED3E2365C12B00D00B06 /* UIColor+RGB.swift */,
 			);
-			path = Utils;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1460ED422365CE8B00D00B06 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1460ED432365CF1800D00B06 /* HeadlinesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1460ED452365FCBF00D00B06 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1460ED462365FCDF00D00B06 /* WebService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +253,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1460ECE72361DB9500D00B06 /* AppDelegate.swift in Sources */,
+				1460ED442365CF1800D00B06 /* HeadlinesCell.swift in Sources */,
 				1460ED412365C61500D00B06 /* HeadlinesViewController.swift in Sources */,
 				1460ECE92361DB9500D00B06 /* SceneDelegate.swift in Sources */,
+				1460ED472365FCDF00D00B06 /* WebService.swift in Sources */,
 				1460ED0B2362129300D00B06 /* ThemeManager.swift in Sources */,
 				1460ED3F2365C12B00D00B06 /* UIColor+RGB.swift in Sources */,
 			);
