@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		1460ECE72361DB9500D00B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ECE62361DB9500D00B06 /* AppDelegate.swift */; };
 		1460ECE92361DB9500D00B06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ECE82361DB9500D00B06 /* SceneDelegate.swift */; };
-		1460ECEB2361DB9500D00B06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ECEA2361DB9500D00B06 /* ViewController.swift */; };
 		1460ECEE2361DB9500D00B06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1460ECEC2361DB9500D00B06 /* Main.storyboard */; };
 		1460ECF02361DB9700D00B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1460ECEF2361DB9700D00B06 /* Assets.xcassets */; };
 		1460ECF32361DB9700D00B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1460ECF12361DB9700D00B06 /* LaunchScreen.storyboard */; };
 		1460ECFE2361DB9700D00B06 /* NeoNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ECFD2361DB9700D00B06 /* NeoNewsTests.swift */; };
+		1460ED0B2362129300D00B06 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED0A2362129300D00B06 /* ThemeManager.swift */; };
+		1460ED3F2365C12B00D00B06 /* UIColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED3E2365C12B00D00B06 /* UIColor+RGB.swift */; };
+		1460ED412365C61500D00B06 /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460ED402365C61500D00B06 /* HeadlinesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,6 @@
 		1460ECE32361DB9500D00B06 /* NeoNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeoNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1460ECE62361DB9500D00B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1460ECE82361DB9500D00B06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1460ECEA2361DB9500D00B06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1460ECED2361DB9500D00B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1460ECEF2361DB9700D00B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1460ECF22361DB9700D00B06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +39,9 @@
 		1460ECF92361DB9700D00B06 /* NeoNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeoNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1460ECFD2361DB9700D00B06 /* NeoNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoNewsTests.swift; sourceTree = "<group>"; };
 		1460ECFF2361DB9700D00B06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1460ED0A2362129300D00B06 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		1460ED3E2365C12B00D00B06 /* UIColor+RGB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+RGB.swift"; sourceTree = "<group>"; };
+		1460ED402365C61500D00B06 /* HeadlinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +83,11 @@
 		1460ECE52361DB9500D00B06 /* NeoNews */ = {
 			isa = PBXGroup;
 			children = (
+				1460ED092362125B00D00B06 /* Managers */,
+				1460ED082361FAC000D00B06 /* Controllers */,
+				1460ED3D2365C10800D00B06 /* Utils */,
 				1460ECE62361DB9500D00B06 /* AppDelegate.swift */,
 				1460ECE82361DB9500D00B06 /* SceneDelegate.swift */,
-				1460ECEA2361DB9500D00B06 /* ViewController.swift */,
 				1460ECEC2361DB9500D00B06 /* Main.storyboard */,
 				1460ECEF2361DB9700D00B06 /* Assets.xcassets */,
 				1460ECF12361DB9700D00B06 /* LaunchScreen.storyboard */,
@@ -97,6 +103,30 @@
 				1460ECFF2361DB9700D00B06 /* Info.plist */,
 			);
 			path = NeoNewsTests;
+			sourceTree = "<group>";
+		};
+		1460ED082361FAC000D00B06 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1460ED402365C61500D00B06 /* HeadlinesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1460ED092362125B00D00B06 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1460ED0A2362129300D00B06 /* ThemeManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1460ED3D2365C10800D00B06 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1460ED3E2365C12B00D00B06 /* UIColor+RGB.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1460ECEB2361DB9500D00B06 /* ViewController.swift in Sources */,
 				1460ECE72361DB9500D00B06 /* AppDelegate.swift in Sources */,
+				1460ED412365C61500D00B06 /* HeadlinesViewController.swift in Sources */,
 				1460ECE92361DB9500D00B06 /* SceneDelegate.swift in Sources */,
+				1460ED0B2362129300D00B06 /* ThemeManager.swift in Sources */,
+				1460ED3F2365C12B00D00B06 /* UIColor+RGB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
