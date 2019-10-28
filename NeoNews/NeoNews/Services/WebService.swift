@@ -24,7 +24,7 @@ struct Resource<T> {
 //MARK: - WebService
 final class WebService {
 // using final for dispatch optimization
-    // метод асинхронной загрузки и обработки пакета
+    // метод асинхронной загрузки и обработки уже готовых данных из ресурса
     func load<T>(_ resource: Resource<T>, completion: @escaping (T?) -> (Void)) {
         URLSession.shared.dataTask(with: resource.url, completionHandler: { data, response, error in
             
