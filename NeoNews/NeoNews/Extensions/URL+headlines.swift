@@ -10,9 +10,10 @@ import Foundation
 
 fileprivate let key: String = "b421feee780e45bba20eaeba874ccdb2"
 fileprivate let baseUrl: String = "https://newsapi.org/v2/top-headlines"
+fileprivate let country: String = "us"
 
 extension URL {
     static func getTopHeadlinesUrl(for category: String) -> URL {
-        return URL(string: "\(baseUrl)?category=\(category)&apiKey=\(key)")!
+        return URL(string: "\(baseUrl)?category=\(category)&country=\(country)&apiKey=\(key)")!
     }
 }
