@@ -19,13 +19,18 @@ class HeadlinesCell: UITableViewCell {
 
 
 extension HeadlinesCell {
-    
+    // конфигурируем ячейку из модели
     func configure(vm: NewsArticleViewModel) {
         titleLabel.text = vm.title
         descriptionLabel.text = vm.description
         vm.image { [weak self] image in
             self?.headlinesImageView.image = image
         }
+    }
+    
+    override func prepareForReuse() {
+        self.headlinesImageView.image = nil
+        super.prepareForReuse()
     }
     
 }

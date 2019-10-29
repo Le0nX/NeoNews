@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+let imageCache = NSCache<AnyObject, AnyObject>()
+
 extension UIImage {
     
     // заглушка для того случая, если мы не смогли подгрузить
@@ -24,10 +26,16 @@ extension UIImage {
             return
         }
         
+        if let image = imageCache.object(forKey: url as AnyObject) as? UIImage {
+            completion(image)
+            return
+        }
+        
         //если с url все ок, то докачиваем image
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: imageURL) {
                 if let downloadedImage = UIImage(data: data) {
+                    imageCache.setObject(downloadedImage, forKey: url as AnyObject) // кэшируем картинку
                     completion(downloadedImage) //TODO: возможно, тут нужен main.async для UI
                 }
             }
