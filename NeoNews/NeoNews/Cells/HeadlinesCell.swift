@@ -16,3 +16,16 @@ class HeadlinesCell: UITableViewCell {
     @IBOutlet weak var headlinesImageView: UIImageView!
     
 }
+
+
+extension HeadlinesCell {
+    
+    func configure(vm: NewsArticleViewModel) {
+        titleLabel.text = vm.title
+        descriptionLabel.text = vm.description
+        vm.image { [weak self] image in
+            self?.headlinesImageView.image = image
+        }
+    }
+    
+}

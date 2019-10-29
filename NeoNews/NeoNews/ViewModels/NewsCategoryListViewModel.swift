@@ -38,7 +38,7 @@ extension NewsCategoryListViewModel {
     }
     
     func articleForSectionAtIndex(section: Int, index: Int) -> NewsArticleViewModel {
-        return categoryAtIndex(index: section).articleAtindex(index)
+        return categoryAtIndex(index: section).articleAtIndex(index)
     }
     
 }
